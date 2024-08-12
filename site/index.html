@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPY Clothing Store - 90s Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🖥️ DPY Clothing Store</h1>
+        <p>Feel the nostalgia of 90s computing while shopping for the latest fashion.</p>
+    </header>
+    
+    <section id="products">
+        <h2>Our 90s Inspired Collection</h2>
+        <div class="product">
+            <h3>Classic T-Shirt</h3>
+            <img src="images/tshirt.png" alt="Classic T-Shirt" onclick="showImageGallery(['images/tshirt.png'])">
+            <p>Price: 1999 ₽</p>
+            <button onclick="addToCart('Classic T-Shirt', 1999)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Retro Jeans</h3>
+            <img src="images/jeans.png" alt="Retro Jeans" onclick="showImageGallery(['images/jeans.png'])">
+            <p>Price: 3499 ₽</p>
+            <button onclick="addToCart('Retro Jeans', 3499)">Add to Cart</button>
+        </div>
+        <!-- Добавьте больше продуктов здесь -->
+    </section>
+
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <button onclick="checkout()">Pay with Cryptocurrency</button>
+    </section>
+
+    <div id="imageGallery" style="display:none;">
+        <span onclick="closeImageGallery()">❌</span>
+        <img id="galleryImage" src="">
+        <button onclick="prevImage()">⬅️</button>
+        <button onclick="nextImage()">➡️</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
